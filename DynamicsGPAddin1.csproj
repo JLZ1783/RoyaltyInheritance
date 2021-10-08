@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{849E09C7-AAF2-4F7D-A4F5-94CCEC5D3140}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DynamicsGPAddin1</RootNamespace>
+    <AssemblyName>DynamicsGPAddin1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Application.Dynamics, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Application.Dynamics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Application.MenusForVisualStudioTools">
+      <HintPath>..\..\..\Documents\GP18.3 References\Application.MenusForVisualStudioTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Application.MicrosoftDynamicsGp, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Application.MicrosoftDynamicsGp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Application.MicrosoftDynamicsGp.Metadata, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Application.MicrosoftDynamicsGp.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Application.MicrosoftDynamicsGp.ModifiedForms, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Application.MicrosoftDynamicsGp.ModifiedForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Application.Ssg, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Application.Ssg.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Application.Ssg.ModifiedForms, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Application.Ssg.ModifiedForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="eOne.Dynamics.GP.LibraryImport">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Dynamics\GP2018\eOne.Dynamics.GP.LibraryImport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GPConnNet, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Common Files\microsoft shared\Dexterity\v2.0\GPConnNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dexterity.Bridge, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Microsoft.Dexterity.Bridge.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dexterity.Shell, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Microsoft.Dexterity.Shell.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dexterity.Svc.Foundation, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Dynamics\GP2018 VS Tools SDK\Microsoft.Dexterity.Svc.Foundation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Framework.UI.WinForms.Controls, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\GP18.3 References\Microsoft.Dynamics.Framework.UI.WinForms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMRoyaltyLotVendorEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMRoyaltyLotVendorEntryForm.Designer.cs">
+      <DependentUpon>BMRoyaltyLotVendorEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="IRoyaltyLotVendorEntryFrom.cs" />
+    <Compile Include="LookUpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookUpWindow.Designer.cs">
+      <DependentUpon>LookUpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs" />
+    <Compile Include="Models\BomModel.cs" />
+    <Compile Include="InheritanceLogic.cs" />
+    <Compile Include="Models\ContractModel.cs" />
+    <Compile Include="DataAccess\DatabaseType.cs" />
+    <Compile Include="DataAccess\GetGP.cs" />
+    <Compile Include="DataAccess\GlobalConfig.cs" />
+    <Compile Include="DataAccess\IDataConnection.cs" />
+    <Compile Include="GpAddIn.cs" />
+    <Compile Include="Models\LotRoyaltyEntryModel.cs" />
+    <Compile Include="Models\RawRoyaltyItemModel.cs" />
+    <Compile Include="Models\RoyaltySalesHistoryModel.cs" />
+    <Compile Include="Models\TrxModel.cs" />
+    <Compile Include="ObjectMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoyaltyEntryWindowFactory.cs" />
+    <Compile Include="RoyaltyLotVendorEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoyaltyLotVendorEntryForm.Designer.cs">
+      <DependentUpon>RoyaltyLotVendorEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VendorModel.cs" />
+    <Compile Include="SalesRoyaltyHistoryInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesRoyaltyHistoryInquiry.Designer.cs">
+      <DependentUpon>SalesRoyaltyHistoryInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesRoyaltyHistoryLogic.cs" />
+    <Compile Include="SqlCrud.cs" />
+    <Compile Include="ZeptoGPConn.cs" />
+    <EmbeddedResource Include="BMRoyaltyLotVendorEntryForm.resx">
+      <DependentUpon>BMRoyaltyLotVendorEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookUpWindow.resx">
+      <DependentUpon>LookUpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoyaltyLotVendorEntryForm.resx">
+      <DependentUpon>RoyaltyLotVendorEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesRoyaltyHistoryInquiry.resx">
+      <DependentUpon>SalesRoyaltyHistoryInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\ContractModel.datasource" />
+    <None Include="Properties\DataSources\Controller.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.DataAccess.GetGP.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.DataAccess.JLz_RoyaltyLotAtt.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.DataAccess.RoyaltyDBDataContext.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.Models.BomModel.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.Models.InheritenceLogic.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.Models.RoyaltyItemModel.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\DynamicsGPAddin1.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\LotRoyaltyEntryModel.datasource" />
+    <None Include="Properties\DataSources\Model.datasource" />
+    <None Include="Properties\DataSources\ObjectMapper.datasource" />
+    <None Include="Properties\DataSources\RoyaltyDB.datasource" />
+    <None Include="Properties\DataSources\RoyaltyLotVendorEntryFrom.datasource" />
+    <None Include="Properties\DataSources\RoyaltyVendorLibrary.DataAccess.GlobalConfig.datasource" />
+    <None Include="Properties\DataSources\RoyaltyVendorLibrary.DataAccess.IDataConnection.datasource" />
+    <None Include="Properties\DataSources\SqlCrud.datasource" />
+    <None Include="Properties\DataSources\VendorModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_NotePresent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Void.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Redisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_DeleteAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_NotePresent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_NoteAbsent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Lookup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Expansion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field_MapPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_NoteAbsent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_Last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCR_First.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar_Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper">
+      <Version>2.0.30</Version>
+    </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager">
+      <Version>4.7.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Linq\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GPSQLConnection\GPSQLConnection2018.dll" />
+    <Content Include="SQL\JLz_sopRoyaltyLotHistory_BatchInsertBySales.sql" />
+    <Content Include="SQL\JLz_spGetSalesRoyaltyHistoryByLot.sql" />
+    <Content Include="SQL\JLz_spRoyaltyEntry_Inherit.sql" />
+    <Content Include="SQL\JLz_spRoyaltyLotEntry_DeleteInherit.sql" />
+    <Content Include="SQL\JLz_spRoyaltyLotEntry_GetByLot.sql" />
+    <Content Include="SQL\JLz_spRoyaltyLotEntry_Insert.sql" />
+    <Content Include="SQL\JLz_spRoyaltyLotEntry_InsertInherit.sql" />
+    <Content Include="SQL\Unused\JLz_spRoyaltyLotEntry_RemoveAll.sql" />
+    <Content Include="SQL\Unused\JLz_spRoyaltyLotEntry_RemoveRow.sql" />
+    <Content Include="SQL\Unused\JLz_spRoyaltyLotWork_Insert.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
